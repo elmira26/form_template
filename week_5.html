@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		function myFunction(){
+			var field = document.getElementById("field").value;
+			var num = /^[0-9]{11}$/;
+			if (num.test(field)){
+				document.getElementById("message").innerHTML = " input accepted ";
+			}
+			else{
+				document.getElementById("message").innerHTML = " try again ";
+			}
+
+		}
+	</script>
+	<title>my page</title>
+</head>
+<body style="background-color: #449c73 ; color: #180c29; text-align: center; letter-spacing: 3px;">
+   <H1 style="margin-top: 20px;">Welcome to my exercise</H1>
+	<p>Here you can find some form</p><p>You can try my function in the input "phone number")) </p>
+	<div>
+	<form style="text-align: left; box-sizing: border-box; width: 400px; margin-left: 160px;">
+		First name:<br>
+		<input type="text" name="firstname" size="30" required style="background-color: #d6e0e6; height: 20px;"><br>
+		Last name:<br>
+		<input type="text" name="lastname" size="30" style="background-color: #d6e0e6; height: 20px;"><br>
+		User password:<br>
+		<input type="password" name="password" size="30" style="background-color: #d6e0e6; height: 20px;"><br>
+		<div >
+		Telephone number:<br>
+		<input type="text" name="quantity" id="field" size="30" onblur="myFunction();" placeholder=" 8(xxx) xxx xxx xxx "style="background-color: #d6e0e6; height: 20px;">
+		<span id="message" style="text-align: right; color:black; "></span><br>
+	   </div>
+		<p>i agree to recieve offers and invitations </p>
+
+		<input type="checkbox" name="skills" value="yes" style="background-color: #d6e0e6;"><br>
+		<p>Write a message to us</p>
+		
+		<textarea name="comment" rows="6" cols="49"  style="background-color: #d6e0e6; color: black; margin-top: 20px; padding: 10px;">
+		</textarea>
+	</form>
+    </div>
+	<div style="text-align: left; padding-left: 160px; margin-top: 15px;">
+		<input type="button" name="" value="Send"> 
+	</div>
+
+
+</body>
+</html>
